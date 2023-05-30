@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import confetti from "canvas-confetti";
 import "./UserArea.css";
 
 const UserArea = () => {
@@ -11,6 +12,13 @@ const UserArea = () => {
         profilePhoto: null,
         companyLogo: null,
     });
+
+    function onClick() {
+        confetti({
+          particleCount: 150,
+          spread: 60
+        });
+    }
 
     const navigate = useNavigate();
 
@@ -30,14 +38,15 @@ const UserArea = () => {
           }));
         }
       };
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/profile", { state: { formData } });
+    onClick();
+    setTimeout(()=>{
+        navigate("/profile", { state: { formData } });
+    },"1000")
   };
     return (
-        <div className="">
+        <div className="user-area-main-container">
             <section class="max-w-4xl p-6 mx-auto bg-indigo-600 rounded-md shadow-md dark:bg-gray-800 mt-20 card-form">
                 <h1 class="text-xl font-bold text-white capitalize dark:text-white">Create Person Profile Card</h1>
                 <form onSubmit={handleSubmit}>
@@ -137,6 +146,7 @@ const UserArea = () => {
                     </div>
 
                     <div class="flex justify-end mt-6">
+                        {/* <div className="canvas"></div> */}
                         <button 
                             type="submit" 
                             class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-pink-500 rounded-md hover:bg-pink-700 focus:outline-none focus:bg-gray-600">

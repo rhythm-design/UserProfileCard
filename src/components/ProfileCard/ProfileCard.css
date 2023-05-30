@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 
 .left-column {
     margin: 0;
@@ -17,6 +18,7 @@
     rotate: -5deg;
     margin: 15%;
     margin-top: 40%;
+    /* border: 2px solid red; */
   }
 
 .wrapper:before{
@@ -93,7 +95,7 @@
     display: flex;
     /* border: 2px solid red; */
     background-color:#cda9a9;
-  }
+}
   
   .left-column,
   .right-column {
@@ -156,18 +158,93 @@
     height: 70%;
 }
 
+/* . */
+
   
   .right-column > div {
     height: 33%;
     margin-bottom: 10px; 
   }
+
+  .dots{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .dot{
+    display: inline-block;
+    height: 7vh;
+    width: 7vh;
+    background-image: radial-gradient(#817bca 30%, transparent 21%),
+        radial-gradient(#817bca 10%, transparent 21%);
+    background-size: 20px 20px;
+    background-position: 0 0 0 30px;
+    background-repeat: repeat;
+  }
   
-  /* @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .card-container {
       width: 50vh;
       height: 50vh; 
+      padding-left: 1vh;
     }
-  } */
+
+    .wrapper{
+        position: relative;
+        height: 40vh;
+        width: 25vh;
+        margin-top: 25%;
+        padding: 30px 10px 10px;
+    }
+
+    .card{
+        width: 22vh;
+        height: 35vh;
+        margin: 0;
+    }
+
+    .wrapper:after{
+        content: "";
+        position: absolute;
+        top: -5vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 7vh;
+        background: #353535;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.125);
+    }
+
+    .card p{
+        font-size: 8px;
+        font-weight: bold;
+    }
+
+    .welcome-title{
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+
+    .about-title {
+        font-size: medium;
+        font-family: 'Poppins', sans-serif;
+        margin-left: 1em;
+    }
+
+    .about-text {
+        font-size: small;
+        font-family: 'Poppins', sans-serif;
+        margin-left: 2em;
+        font-weight: 900;
+    }
+    .person-desc{
+        padding: 1em;
+    }
+  }
 
 .profile-photo-img{
     border-radius: 50%;

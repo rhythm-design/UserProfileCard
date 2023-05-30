@@ -5,12 +5,16 @@ import ProfileCard from './components/ProfileCard/ProfileCard';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<UserArea />} />
-        <Route path="/profile" element={<ProfileCard />} />
-      </Routes>
-    </Router>
+    <div className="App">
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<UserArea />} />
+          <Route path="/profile" element={<ProfileCard />} />
+        </Routes>
+      </Router>
+
+    </div>
   );
 }
 

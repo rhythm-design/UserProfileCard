@@ -42,7 +42,7 @@ const ProfileCard = () => {
                             </div>
                         )}
                         <div class="info">
-                            <p>{formData.personname}</p>
+                            <p className="person-name-p">{formData.personname}</p>
                             <p>{formData.designation}</p>
                         </div>
                     </div>
@@ -65,7 +65,7 @@ const ProfileCard = () => {
                 </div>
 
                 <div className="dots">
-
+                    <div className="dot"></div>
                 </div>
             </div>
         </div>
