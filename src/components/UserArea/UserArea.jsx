@@ -61,6 +61,7 @@ const UserArea = () => {
                                 onChange={(e) =>
                                     setFormData({ ...formData, personname: e.target.value })
                                 }
+                                required
                             />
                         </div>
 
@@ -74,6 +75,7 @@ const UserArea = () => {
                                 onChange={(e) =>
                                     setFormData({ ...formData, designation: e.target.value })
                                 }
+                                required
                             />
                         </div>
 
@@ -87,6 +89,7 @@ const UserArea = () => {
                                 onChange={(e) =>
                                     setFormData({ ...formData, about: e.target.value })
                                 }
+                                required
                             />
                         </div>
                         <div>
@@ -110,7 +113,7 @@ const UserArea = () => {
                                 <div class="flex text-sm text-gray-600">
                                     <label for="profile-photo-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                         <span class="pl-2 pr-2">Upload a Photo</span>
-                                        <input id="profile-photo-upload" name="profilePhoto" type="file" class="sr-only"  onChange={handleChange} />
+                                        <input id="profile-photo-upload" name="profilePhoto" type="file" class="sr-only"  onChange={handleChange} required/>
                                     </label>
                                     <p class="pl-1 text-white">or drag and drop</p>
                                 </div>
@@ -133,7 +136,7 @@ const UserArea = () => {
                                 <div class="flex text-sm text-gray-600">
                                     <label for="logo-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                         <span class="pl-2 pr-2">Upload Logo</span>
-                                        <input id="logo-upload" name="companyLogo" type="file" class="sr-only" onChange={handleChange}/>
+                                        <input id="logo-upload" name="companyLogo" type="file" class="sr-only" onChange={handleChange} required/>
                                     </label>
                                     <p class="pl-1 text-white">or drag and drop</p>
                                 </div>
