@@ -1,18 +1,16 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import html2canvas from "html2canvas";
+import DomToImage from "dom-to-image";
 import "./ProfileCard.css";
 const ProfileCard = () => {
 
-    const exportAsJPG = () => {
-        const cardContainer = document.querySelector('.card-container');
-        html2canvas(cardContainer).then((canvas) => {
-          const link = document.createElement('a');
-          link.href = canvas.toDataURL('image/jpeg');
-          link.download = 'profile-card.jpg';
-          link.click();
-        });
-      };
+    const exportAsJPG = () => DomToImage.toJpeg(document.querySelector('.card-container'), { quality: 0.95 })
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'my-image-name.jpeg';
+        link.href = dataUrl;
+        link.click();
+    });
     
   const location = useLocation();
   const navigate = useNavigate();
