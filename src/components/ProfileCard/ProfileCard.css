@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+.left-column {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper {
+    position: relative;
+    width: 15em;
+    height: 25em;
+    background: #e4bcbc;
+    padding: 35px 15px 15px;
+    border-radius: 5px;
+    rotate: -5deg;
+    margin: 15%;
+    margin-top: 40%;
+  }
+
+.wrapper:before{
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 13px;
+  background: #c29898;
+  border-radius: 50px;
+}
+
+.wrapper:after{
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 100px;
+  background: #353535;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.125);
+}
+
+.card{
+  width: 200px;
+  height: 320px;
+  background: #fff;
+  padding: 20px 20px 0;
+  position: relative;
+  border-radius: 5px;
+  /* border: 2px solid red; */
+  margin-left: 3%;
+}
+
+.card img{
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.card .info{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  padding: 20px;
+  background: #2c9c4f;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.card p{
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+
+.profile-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card-container {
+    width: 60vh; 
+    height: 60vh; 
+    display: flex;
+    /* border: 2px solid red; */
+    background-color:#cda9a9;
+  }
+  
+  .left-column,
+  .right-column {
+    width: 50%; 
+  }
+
+.right-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-image{
+    margin: auto;
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+}
+
+.right-column > .company-logo-container {
+    height: 25%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1em;
+}
+
+.logo-secondary-container{
+    display: flex;
+    text-align: right;
+}
+
+.person-desc{
+    padding: 1em;
+    position: relative;
+}
+
+.welcome-title{
+    margin: auto;
+    margin-top: 5%;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.about-title{
+    color: #2c9c4f;
+    font-size: x-large;
+    text-align: center;
+    font-weight: 800;
+}
+
+.about-text {
+    font-size: larger;
+    text-align: center;
+    font-weight: 600;
+}
+
+.right-column > .person-desc {
+    height: 70%;
+}
+
+  
+  .right-column > div {
+    height: 33%;
+    margin-bottom: 10px; 
+  }
+  
+  /* @media screen and (max-width: 768px) {
+    .card-container {
+      width: 50vh;
+      height: 50vh; 
+    }
+  } */
+
+.profile-photo-img{
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 12em;
+    max-height: 12em;
+}
