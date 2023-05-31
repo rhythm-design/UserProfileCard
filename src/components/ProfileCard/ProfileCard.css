@@ -95,7 +95,66 @@
     display: flex;
     /* border: 2px solid red; */
     background-color:#cda9a9;
+    position: relative;
 }
+
+.wave{
+  /* width: 100px;
+  height: 100px;
+  background-color: #2c9c4f; */
+  /* width: 100%; */
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+}
+
+.custom-shape-divider-top-1685506080 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1685506080 svg {
+  position: relative;
+  display: block;
+  width: calc(60% + 1.3px);
+  height: 10px;
+}
+
+.custom-shape-divider-top-1685506080 .shape-fill {
+  fill: #F3C21F;
+}
+
+
+
+.custom-shape-divider-top-1685505344 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1685505344 svg {
+  position: relative;
+  display: block;
+  width: calc(123% + 1.3px);
+  height: 123px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1685505344 .shape-fill {
+  fill: #F3C21F;
+}
+
+
   
   .left-column,
   .right-column {
@@ -186,7 +245,7 @@
     background-repeat: repeat;
   }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 961px) {
     .card-container {
       width: 50vh;
       height: 50vh; 
